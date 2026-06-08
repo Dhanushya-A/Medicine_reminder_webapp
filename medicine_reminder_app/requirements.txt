@@ -1,9 +1,9 @@
 Flask
 Flask-SQLAlchemy
 Flask-Mail
-python-dotenv
-Werkzeug
 itsdangerous
 APScheduler
 twilio
+python-dotenv
+Werkzeug
 gunicorn
