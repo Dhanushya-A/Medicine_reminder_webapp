@@ -1,9 +1,0 @@
-Flask
-Flask-SQLAlchemy
-Flask-Mail
-itsdangerous
-APScheduler
-twilio
-python-dotenv
-Werkzeug
-gunicorn
