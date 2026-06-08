@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static',
+    filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>MediCare 💊</h2>
+
+    <a href="/dashboard">
+        Dashboard
+    </a>
+
+    <a href="/history">
+        History
+    </a>
+
+    <a href="/logs">
+        Activity Logs
+    </a>
+
+    <a href="/analytics">
+        Analytics
+    </a>
+
+    <a href="/logout">
+        Logout
+    </a>
+
+</div>
+
+
+<div class="main">
+
+    <div class="topbar">
+
+        <h1>
+            Analytics 📊
+        </h1>
+
+    </div>
+
+
+    <div class="stats">
+
+        <div class="card">
+
+            <h3>Total Medicines</h3>
+
+            <p>{{total}}</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Taken</h3>
+
+            <p>{{taken}}</p>
+
+        </div>
+
+
+        <div class="card">
+
+            <h3>Pending</h3>
+
+            <p>{{pending}}</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="analytics-box">
+
+        <h2>
+            Completion Rate
+        </h2>
+
+        <div class="progress-container">
+
+            <div class="progress-bar"
+            style="width: {{ percent }}%;">
+
+                {{percent}}%
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="analytics-box">
+
+        <h2>
+            Health Insight
+        </h2>
+
+        <p>
+
+        {% if percent >= 80 %}
+
+            Excellent medicine tracking ✅
+
+        {% elif percent >= 50 %}
+
+            Good consistency 👍
+
+        {% else %}
+
+            Try to take medicines on time ⚠️
+
+        {% endif %}
+
+        </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
+
